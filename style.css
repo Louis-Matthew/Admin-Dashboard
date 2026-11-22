@@ -42,6 +42,7 @@ header{
     display: grid;
     grid-template-rows: auto auto;
     padding: 20px 40px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .top-bar{
@@ -63,9 +64,9 @@ header{
     background-color: var(--bg-color);
     outline: none;
     border-radius: 24px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: inherit;
-    padding: 0 24px;
+    padding: 24px;
     min-width: 0;
 }
 
@@ -208,5 +209,123 @@ nav{
 
 main{
     background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 40px;
+    align-items: start;
+    padding: 32px 40px;
+    overflow-y: auto;
 }
+
+main h2{
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.project-card{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 320px;
+    padding: 32px;
+    background-color: var(--white-color);
+    border-left: 12px solid var(--accent);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.project-card p{
+    font-size: 1.25rem;
+    color: var(--mutes-text-color);
+}
+
+.project-actions{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    column-gap: 24px;
+}
+
+.project-actions button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.project-actions button:hover{
+    background-color: var(--bg-color);
+}
+
+.project-actions svg{
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.right-column{
+    display: grid;
+    row-gap: 40px;
+}
+
+.panel{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    list-style: none;
+}
+
+.announcements article{
+    padding: 16px 0;
+}
+
+.announcements article + article{
+    border-top: 1px solid #d2d2d2;
+}
+
+.announcements h3{
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.announcements p{
+    font-size: 0.95rem;
+    color: var(--mutes-text-color);
+}
+
+.trending-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 16px;
+    padding: 12px 0;
+}
+
+.trending-item img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.project-name{
+    color: var(--mutes-text-color);
+}
+
+
+
 
