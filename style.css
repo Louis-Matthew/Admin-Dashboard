@@ -33,12 +33,117 @@ body{
     height: 100vh;
     font-family: "Roboto", sans-serif;
     display: grid;
-    grid-template-columns:  450px 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns:  400px 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 header{
     background-color: var(--white-color);
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 20px 40px;
+}
+
+.top-bar{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.top-bar > svg{
+    width: 48px;
+    height: 48px;
+    fill: currentColor;
+}
+
+.search{
+    height: 48px;
+    border: none;
+    background-color: var(--bg-color);
+    outline: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0 24px;
+    min-width: 0;
+}
+
+.bell{
+    margin-left: 80px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.bell svg{
+    width: 40px;
+    height: 40px;
+    fill: var(--text-color);
+}
+
+.avatar{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #FACC15;
+}
+
+.username{
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.welcome{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 32px;
+    margin-top: 24px;
+}
+
+.welcome-avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-text p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.welcome-text h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.welcome-actions{
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 24px;
+}
+
+.welcome-actions button{
+    padding: 14px 40px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--primary-blue);
+    color: var(--white-color);
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.welcome-actions button:hover {
+  filter: brightness(0.92);
 }
 
 .sidebar{
